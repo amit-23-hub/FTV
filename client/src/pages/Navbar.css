@@ -1,0 +1,104 @@
+/* Navbar.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0rem; /* Adjust padding for height */
+    background-color: rgb(255, 190, 223);
+    color: #fff;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure navbar stays above other content */
+    width: 100%; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute; 
+    right: 1rem; 
+    top: 0.5rem; 
+  }
+  
+  .navbar-menu {
+    display: flex;
+    gap: 1rem;
+    padding: 0rem;
+  }
+  
+  .navbar-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  
+  .navbar-menu a:hover {
+    border-radius: 5px;
+  }
+  
+  .navbar-menu.open {
+    display: flex;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: rgb(255, 190, 223);
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      right: 0; 
+    }
+  
+    .navbar-menu.open {
+      display: flex;
+    }
+  
+    .navbar-menu ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .navbar-menu li {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .navbar-menu a {
+      display: block;
+      padding: 1rem;
+    }
+  }
+  
