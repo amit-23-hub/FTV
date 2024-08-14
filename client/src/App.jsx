@@ -1,5 +1,5 @@
 import 'flowbite/dist/flowbite.css';
-import React from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -13,6 +13,7 @@ import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import About from './pages/about';
 import Blog from './pages/Blog';
+import Contest from './pages/Contest/Contest';
 
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home/>}></Route>
       <Route path="/about" element={<About/>}></Route>
+      <Route path="/contest" element={<Contest/>} />
       <Route path="/blog" element={<Blog/>}></Route>
       <Route path='/sign-in' element = {<Signin/>} />
       <Route path='/sign-up' element = {<Signup/>} />
